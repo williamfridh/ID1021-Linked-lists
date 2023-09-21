@@ -31,6 +31,7 @@ class LinkedListDoubly {
 
 		public void insert(LinkedListDoubly list) {
 			if (list.first != null) {
+				list.first.prv = this;
 				this.nxt = list.first;
 			}
 			list.first = this;
@@ -165,6 +166,7 @@ class LinkedListDoubly {
 			last = last.nxt;
 		}
 		last.nxt = second_list.first;
+		last.nxt.prv = last;
 		second_list.first = null;
 	}
 

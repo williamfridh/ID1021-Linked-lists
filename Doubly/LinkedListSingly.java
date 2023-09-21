@@ -27,6 +27,13 @@ class LinkedListSingly {
             }
 			prv.nxt = nxt;
 		}
+
+		public void insert(LinkedListSingly list) {
+			if (list.first != null) {
+				this.nxt = list.first;
+			}
+			list.first = this;
+		}
 	}
 
 
